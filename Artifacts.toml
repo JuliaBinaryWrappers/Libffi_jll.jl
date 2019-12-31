@@ -111,3 +111,13 @@ os = "linux"
     [[Libffi.download]]
     sha256 = "eef8fa8819c3b6b0143820a8d61c38cda7c444e3ade1804ca695be05b6ccd002"
     url = "https://github.com/JuliaBinaryWrappers/Libffi_jll.jl/releases/download/Libffi-v3.2.1+0/Libffi.v3.2.1.arm-linux-gnueabihf.tar.gz"
+[[Libffi]]
+arch = "x86_64"
+git-tree-sha1 = "b5e8c2abb5662e90b6799b446ab758b8c230c3b7"
+libc = "glibc"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Libffi.download]]
+    sha256 = "5c9d2fd1b2ffec89821aca7a2ae353e6214ec5b2dd03ded11d7aaf807f9bec7a"
+    url = "https://github.com/JuliaBinaryWrappers/Libffi_jll.jl/releases/download/Libffi-v3.3.0+0/Libffi.v3.3.0.x86_64-linux-gnu-libgfortran4.tar.gz"
