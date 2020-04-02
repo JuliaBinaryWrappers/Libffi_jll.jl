@@ -2,8 +2,6 @@
 export libffi
 
 ## Global variables
-const PATH_list = String[]
-const LIBPATH_list = String[]
 PATH = ""
 LIBPATH = ""
 LIBPATH_env = "PATH"
@@ -26,12 +24,13 @@ const libffi = "libffi-6.dll"
 Open all libraries
 """
 function __init__()
-    global prefix = abspath(joinpath(@__DIR__, ".."))
+    global artifact_dir = abspath(artifact"Libffi")
 
     # Initialize PATH and LIBPATH environment variable listings
     global PATH_list, LIBPATH_list
-
-    global libffi_path = abspath(joinpath(artifact"Libffi", libffi_splitpath...))
+    # We first need to add to LIBPATH_list the libraries provided by Julia
+    append!(LIBPATH_list, [Sys.BINDIR, joinpath(Sys.BINDIR, Base.LIBDIR, "julia"), joinpath(Sys.BINDIR, Base.LIBDIR)])
+    global libffi_path = normpath(joinpath(artifact_dir, libffi_splitpath...))
 
     # Manually `dlopen()` this right now so that future invocations
     # of `ccall` with its `SONAME` will find this path immediately.
