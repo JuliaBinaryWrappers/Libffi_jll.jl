@@ -7,7 +7,7 @@ function __init__()
     JLLWrappers.@generate_init_header()
     JLLWrappers.@init_library_product(
         libffi,
-        "lib64/libffi.so",
+        "lib/libffi.so",
         RTLD_LAZY | RTLD_DEEPBIND,
     )
 
