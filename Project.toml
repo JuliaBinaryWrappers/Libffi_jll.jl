@@ -1,6 +1,6 @@
 name = "Libffi_jll"
 uuid = "e9f186c6-92d2-5b65-8a66-fee21dc1b490"
-version = "3.4.6+2"
+version = "3.2.2+2"
 
 [deps]
 JLLWrappers = "692b3bcd-3c85-4b1f-b108-f13ce0eb3210"

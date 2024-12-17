@@ -2,12 +2,12 @@
 export libffi
 
 JLLWrappers.@generate_wrapper_header("Libffi")
-JLLWrappers.@declare_library_product(libffi, "libffi-8.dll")
+JLLWrappers.@declare_library_product(libffi, "libffi-6.dll")
 function __init__()
     JLLWrappers.@generate_init_header()
     JLLWrappers.@init_library_product(
         libffi,
-        "bin\\libffi-8.dll",
+        "bin\\libffi-6.dll",
         RTLD_LAZY | RTLD_DEEPBIND,
     )
 
